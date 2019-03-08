@@ -1,0 +1,27 @@
+{
+    "policy":{
+        "name":"rocket_break_baseline",
+        "open_position":{
+             "buy_approach":"ma_cross/rocket_break/macd_cross"
+        },
+        "close_position":[
+            {
+                "sell":{
+                    "method":"break_lowest",
+                    "lowest_n":5
+                }
+            }
+        ],
+        "risk":{
+            "one_account_position":{
+                "strong_market":100,
+                "weak_market":50,
+                "unknow_market":20
+            },
+            "one_stock_position":{
+                "max_position":0.2
+            },
+            "max_number_of_stocks":3
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "runtime":{
+        "Log":"Debug"
+    },
+    "policy":{
+        "name":"rocket_break_baseline",
+        "context":{
+            "short":5,
+            "mid":10,
+            "scale_start":0,
+            "scale_end":3,
+            "level":"Day"
+        },
+        "account":{
+            "init_cash":100000
+        },
+        "open_position":{
+             "buy_approach":"rocket_break"
+        },
+        "close_position":[
+            {
+                "sell":{
+                    "method":"break_lowest",
+                    "lowest_n":5
+                }
+            }
+        ],
+        "risk":{
+            "enable_one_account_position":"False",
+            "one_account_position":{
+                "strong_market":100,
+                "weak_market":50,
+                "unknow_market":20
+            },
+            
+            "one_stock_position":{
+                "max_position":0.2
+            },
+            
+            "max_number_of_stocks":3,
+            
+            "stop_loss":{
+                "enabled":"False",
+                "approach":"fixed_percent",
+                "fixed_percent":{
+                      "percent":7
+                }
+            }
+        },
+        
+        "profit":{
+            "stop_profit":{
+                "enabled":"False",
+                "approach":{
+                    "ATR":{
+                        "max_atr":2
+                    }
+                }
+            }
+        }
+    }
+}
