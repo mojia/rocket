@@ -5,8 +5,8 @@
     "policy":{
         "name":"rocket_break_baseline",
         "context":{
-            "short":5,
-            "mid":10,
+            "short":40,
+            "mid":240,
             "scale_start":0,
             "scale_end":3,
             "level":"Day"
