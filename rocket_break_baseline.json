@@ -29,6 +29,7 @@
         
         "risk":{
             "enable_one_account_position":"False",
+            
             "one_account_position":{
                 "strong_market":100,
                 "weak_market":50,
