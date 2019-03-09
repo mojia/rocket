@@ -5,7 +5,7 @@
     "policy":{
         "name":"rocket_break_baseline",
         "context":{
-            "short":40,
+            "short":10,
             "mid":240,
             "scale_start":0,
             "scale_end":3,
