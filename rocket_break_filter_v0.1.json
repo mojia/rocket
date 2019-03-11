@@ -1,6 +1,6 @@
 {
     "runtime":{
-        "Log":"Info"
+        "Log":"Debug"
     },
     "policy":{
         "name":"rocket_break_baseline",
@@ -17,7 +17,13 @@
         "strategy":{
             "stype":"break",
             "open_position":{
-                 "buy_approach":"rocket_break"
+                 "buy_approach":"rocket_break",
+                 "filter":{
+                     "enabled":"True",
+                     "type":"ma",
+                     "param":90,
+                     "direction":"up"
+                 }
              },
             "close_position":{
                  "sell":{

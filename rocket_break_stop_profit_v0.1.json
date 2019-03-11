@@ -17,7 +17,13 @@
         "strategy":{
             "stype":"break",
             "open_position":{
-                 "buy_approach":"rocket_break"
+                 "buy_approach":"rocket_break",
+                 "filter":{
+                     "enabled":"False",
+                     "type":"ma",
+                     "param":90,
+                     "direction":"up"
+                  }
              },
             "close_position":{
                  "sell":{
@@ -43,8 +49,8 @@
             "max_number_of_stocks":1,
             
             "stop_loss":{
-                "enabled":"False",
-                "approach":"fixed_percent",
+                "enabled":"True",
+                "approach":"fixed_percent_stop_loss",
                 "fixed_percent":{
                       "percent":7
                 }
@@ -53,12 +59,12 @@
         
         "profit":{
             "stop_profit":{
-                "enabled":"False",
-                "approach":{
-                    "ATR":{
-                        "max_atr":2
+                "enabled":"True",
+                "approach":"previous_high_ATR",
+                "ATR":{
+                        "max_atr":3,
+                        "previous_high_days":20
                     }
-                }
             }
         }
     }
