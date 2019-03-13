@@ -33,6 +33,28 @@
             }
         },
         
+        "honor_account":{
+            "enable":"True",
+            "when_increase_amplified_times":1.5,
+            "when_decrease_amplified_times":1.5
+        },
+        
+        "position_control":{
+            "adding_position":{
+                "enable":"True",
+                "method":"based_on_new_break_point",
+                "increase_percent_adding":{
+                    "first_position_part":20,
+                    "second_position_part":30,
+                    "third_position_part":40,
+                    "fourth_position_part":10
+                }
+            },
+            "reducing_position":{
+                "enable":"False"
+            }
+        },
+        
         "risk":{
             "enable_one_account_position":"False",
             
@@ -62,8 +84,9 @@
                 "enabled":"True",
                 "approach":"previous_high_ATR",
                 "ATR":{
-                        "atr_times":3,
-                        "previous_high_days":20
+                        "atr_times":2,
+                        "previous_high_days":20,
+                        "over_percent":20
                     }
             }
         }
