@@ -34,7 +34,7 @@
         },
         
         "honor_account":{
-            "enable":"True",
+            "enable":"False",
             "when_increase_amplified_times":1.5,
             "when_decrease_amplified_times":1.5
         },
