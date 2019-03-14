@@ -53,7 +53,9 @@
             },
             "reducing_position":{
                 "enable":"False",
-                "reverse_reducing":"True"
+                "decrease_watching_window":10,
+                "decrease_percent_standard":10,
+                "reduce_percent":40
             }
         },
         
