@@ -1,12 +1,13 @@
 {
     "runtime":{
-        "Log":"Info",
+        "Log":"Debug",
         "enable_painter":"False"
     },
+    
     "policy":{
         "name":"rocket_break_baseline",
         "context":{
-            "short":60,
+            "short":30,
             "mid":240,
             "scale_start":0,
             "scale_end":3,
@@ -35,45 +36,46 @@
         },
         
         "honor_account":{
-            "enable":"False",
-            "when_increase_amplified_times":1.5,
-            "when_decrease_amplified_times":1.5
+            "enable":"True",
+            "when_increase_amplified_times":1,
+            "when_decrease_amplified_times":1
         },
         
         "position_control":{
             "adding_position":{
                 "enable":"True",
-                "method":"based_on_increase_percent",
+                "method":"based_on_expose_risk",
+                "single_deal_expose_risk_percent":2,
                 "increase_percent_standard":10,
                 "gradually_add_percent":{
-                    "first_position_part":20,
-                    "second_position_part":30,
-                    "third_position_part":40,
-                    "fourth_position_part":10
+                    "first_position_part":2,
+                    "second_position_part":60,
+                    "third_position_part":38,
+                    "fourth_position_part":0
                 }
             },
             "reducing_position":{
                 "enable":"True",
                 "decrease_watching_window":10,
-                "decrease_percent_standard":20,
-                "reduce_percent":30
+                "decrease_percent_standard":10,
+                "reduce_percent":40
             }
         },
         
         "risk":{
-            "enable_one_account_position":"False",
-            
-            "one_account_position":{
+            "account_level_position":{
+                "enable":"False",
                 "strong_market":100,
-                "weak_market":50,
-                "unknow_market":20
+                "weak_market":30,
+                "unknow_market":30
             },
             
-            "one_stock_position":{
-                "max_position":0.2
+            "stock_level_position":{
+                "enable":"False",
+                "max_position_per":30
             },
             
-            "max_number_of_stocks":1,
+            "max_number_of_stocks":3,
             
             "stop_loss":{
                 "enabled":"True",
@@ -86,7 +88,7 @@
         
         "profit":{
             "stop_profit":{
-                "enabled":"False",
+                "enabled":"True",
                 "approach":"previous_high_ATR",
                 "ATR":{
                         "atr_times":3,
