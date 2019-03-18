@@ -1,6 +1,6 @@
 {
     "runtime":{
-        "Log":"Debug",
+        "Log":"Info",
         "enable_painter":"False"
     },
     
@@ -48,9 +48,9 @@
                 "single_deal_expose_risk_percent":2,
                 "increase_percent_standard":10,
                 "gradually_add_percent":{
-                    "first_position_part":2,
-                    "second_position_part":60,
-                    "third_position_part":38,
+                    "first_position_part":50,
+                    "second_position_part":40,
+                    "third_position_part":10,
                     "fourth_position_part":0
                 }
             },
@@ -58,7 +58,7 @@
                 "enable":"True",
                 "decrease_watching_window":10,
                 "decrease_percent_standard":10,
-                "reduce_percent":40
+                "reduce_percent":90
             }
         },
         
@@ -71,8 +71,8 @@
             },
             
             "stock_level_position":{
-                "enable":"False",
-                "max_position_per":30
+                "enable":"True",
+                "max_position_per":50
             },
             
             "max_number_of_stocks":3,
