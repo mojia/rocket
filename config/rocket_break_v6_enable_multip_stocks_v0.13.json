@@ -37,14 +37,16 @@
         
         "honor_account":{
             "enable":"True",
-            "when_increase_amplified_times":1,
-            "when_decrease_amplified_times":1
+            "increase_percent":20
+            "decrease_percent":20
+            "asset_previous_days":30,
+            "asset_change_per_threshold":10
         },
         
         "position_control":{
             "adding_position":{
                 "enable":"True",
-                "method":"based_on_expose_risk",
+                "method":"based_on_increase_percent",
                 "single_deal_expose_risk_percent":2,
                 "increase_percent_standard":10,
                 "gradually_add_percent":{
